@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Fantasy Item Cards</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap');
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #ece8df;
+      font-family: "Georgia", serif;
+    }
+
+  .card-container {
+  display: flex;
+  flex-wrap: wrap;  /* Allows multiple rows if needed */
+  justify-content: center; /* Keeps cards centered */
+  gap: 1rem; /* Adds spacing between cards */
+  position: relative; /* Ensures the chaos border doesn't disrupt layout */
+}
+
+   /* Item Card with Chaos Aesthetic */
+ .item-card {
+  position: relative; /* Allows absolute child elements like chaos-border */
+  width: 350px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url('./images/chaos-texture.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 12px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: "Georgia", serif;
+  padding: 15px;
+  overflow: hidden; /* Ensures border doesn't overflow */
+  z-index: 1; /* Keeps card content above background */
+  border: 10px solid #5b0404 !important;
+}
+
+/* Title Section */
+.card-title h2 {
+  font-family: 'Uncial Antiqua', serif; /* More eldritch look */
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #ddb35e; /* Gold-chaos tint */
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(255, 0, 0, 0.8); /* Subtle glow */
+}
+
+/* Image Section */
+.card-image {
+  display: flex;
+  flex-direction: column; /* Stack image and tags */
+  align-items: center;
+  justify-content: center;
+  height: 220px; /* Fixed height to prevent shifting */
+  position: relative;
+}
+.card-image img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin: auto;
+  padding: 5px;
+}
+
+.item-card:nth-of-type(1) .card-image img {
+  transform: scale(1.2);
+}
+.item-card:nth-of-type(2) .card-image img {
+  transform: scale(1.2);
+}
+.item-card:nth-of-type(3) .card-image img {
+  transform: scale(1.2);
+  margin-bottom: 15px; /* Adds space between the image and tags */
+}
+
+/* Subtitle Tags */
+.subtitle-tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+  position: relative;
+}
+
+.subtitle-tags .tag {
+  background: #5b0404;
+  color: #f8e7da;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Description Section */
+.description {
+  margin: 1rem 0;
+  max-height: 130px;
+  color: #d0c6b8;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0.5rem 0;       /* Add spacing around the text */
+}
+
+/* Stats Section */
+.stats {
+  position: static !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;  
+  max-width: none !important; /* Override any previous max-width */
+  box-sizing: border-box !important;
+  flex-wrap: nowrap !important;
+  font-size: 10pt !important;
+  padding: 0.9rem 6px !important; 
+  background: #3e1c1c !important; /* Dark, bloodied background */
+  border: 3px solid #5b0404 !important; /* Deep red Chaos border */
+  border-radius: 0 0 9px 9px !important;
+  box-shadow: inset 0 -4px 6px rgba(255, 0, 0, 0.4) !important; /* Red glow inside */
+  margin-top: auto !important;
+}
+
+.stats div {
+  flex: 1 !important; /* Ensures equal width distribution */
+  text-align: center !important;
+  font-weight: bold !important;
+  font-size: 0.9rem !important;
+  border-right: 2px solid #5b0404 !important; /* Dark red divider */
+  box-sizing: border-box !important; /* Maintain proper flex sizing */
+
+  /* ✅ Ensures text fits and is fully visible */
+  white-space: normal !important; /* Allow multi-line text */
+  word-break: break-word !important; /* Prevents text overflow */
+  overflow: visible !important; /* Ensures full text visibility */
+  text-overflow: unset !important; /* Remove ellipsis effect */
+  color: #f8e7da !important; /* Off-white to contrast dark bg */
+}
+
+.stats div:last-child {
+  border-right: none !important; /* Remove last divider */
+}
+@media print {
+  * {
+    box-sizing: border-box !important;
+    font-family: 'Georgia', serif !important;
+  }
+
+  body {
+    background: url('chaos-texture.png') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color: black !important;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .item-card {
+  display: flex;
+  flex-direction: column;
+  border: 10px solid #5b0404 !important;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2) !important;
+  justify-content: space-between;
+  align-items: center;
+  height: auto !important;
+  min-height: 600px;
+  width: 350px !important;
+  page-break-inside: avoid;
+  border-radius: 12px !important;
+  background: url('./images/chaos-texture.png') no-repeat center center !important;
+  background-size: cover !important;
+  padding: 15px !important;
+  position: relative !important;
+  padding-bottom: 10px !important;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2) !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  font-family: "Georgia", serif !important;
+  z-index: 1 !important;
+}
+
+
+  /* Chaos border for print */
+  .item-card::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -10px !important;
+    left: -10px !important;
+    width: calc(100% + 20px) !important;
+    height: calc(100% + 20px) !important;
+    z-index: 10 !important;
+    pointer-events: none !important;
+  }
+
+  .card-image img {
+    max-width: 140%;
+    max-height: 280px;
+    object-fit: none;
+    display: block !important;
+    margin: 0 auto;
+    visibility: visible !important;
+  }
+
+  .subtitle-tags {
+    font-size: 0.9rem;
+    color: #f8e7da !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  .subtitle-tags .tag { 
+  /* replicate your screen tag style */
+  background: #5b0404; 
+  padding: 4px 8px;
+  font-size: 0.85rem; 
+  box-shadow: inset 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+  h1, h2, h3 {
+    font-weight: 700 !important;
+    font-family: "Georgia", serif !important;
+  }
+  .description {
+    font-size: 0.9rem;
+    max-height: none;
+    line-height: 1.5 !important;
+    overflow: hidden !important;
+    color: #f8e7da !important;
+  }
+  .stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3e1c1c !important;
+  border: 3px solid #5b0404 !important;
+  border-radius: 0 0 9px 9px;
+  margin: 0 !important; /* Remove the -19px shift */
+  width: 100% !important; /* prevent overflow */
+  padding: 0.75rem 4px !important;
+  box-shadow: inset 0 -4px 6px rgba(255, 0, 0, 0.4) !important;
+}
+.stats div {
+  flex: 1 !important;
+  text-align: center !important;
+  font-weight: bold !important;
+  font-size: 0.9rem !important;
+  border-right: 2px solid #5b0404 !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  color: #f8e7da !important;
+}
+.stats div:last-child {
+  border-right: none !important;
+}
+
+  .no-print {
+    display: none !important;
+  }
+}
+  </style>
+</head>
+<body>
+  <div id="card-container" class="card-container">
+    <div class="chaos-border-1.png"></div> <!-- This ensures the border surrounds all cards -->
+</body>
+  <script>
+    // Fetch the JSON file and render cards
+    function fetchItems() {
+      fetch('./items.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(items => {
+          renderCards(items);
+        })
+        .catch(error => {
+          console.error('Error fetching items:', error);
+        });
+    }
+
+    // Function to create a single card
+    function createCard(item) {
+      return `
+        <div class="item-card">
+          <!-- Card Title --> 
+          <div class="card-title">
+            <h2>${item.title}</h2>
+          </div>
+          <!-- Item Image -->
+          <div class="card-image">
+            <img src="${item.image}" alt="${item.title}" />
+          </div>
+          <!-- Subtitle Tags -->
+          <div class="subtitle-tags">
+            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+          </div>
+          <!-- Description -->
+          <div class="description">
+            ${item.description.map(paragraph => `<p>${paragraph}</p>`).join("")}
+          </div>
+          <!-- Stats -->
+          <div class="stats">
+            <div><strong>Cost:</strong> ${item.stats.Cost}</div>
+            <div><strong>Enc:</strong> ${item.stats.Enc}</div>
+        <div><strong>Effect:</strong> ${item.stats.Effect}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Function to render all cards
+    function renderCards(items) {
+      const container = document.getElementById("card-container");
+      container.innerHTML = items.map(createCard).join("");
+    }
+
+    // Call the fetchItems function on page load
+    fetchItems();
+  </script>
+</body>
+</html>
