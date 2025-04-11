@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dynamic Fantasy Item Cards</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
     body {
       margin: 0;
       padding: 20px;
@@ -22,33 +22,32 @@
 }
 
    /* Item Card with Chaos Aesthetic */
- .item-card {
+.item-card {
   position: relative; /* Allows absolute child elements like chaos-border */
   width: 350px;
   min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url('./images/chaos-texture.png') no-repeat center center;
+  background: url('./images/texture.jpg') no-repeat center center;
   background-size: cover;
   border-radius: 12px;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   font-family: "Georgia", serif;
   padding: 15px;
   overflow: hidden; /* Ensures border doesn't overflow */
   z-index: 1; /* Keeps card content above background */
-  border: 10px solid #5b0404 !important;
+  border: 10px solid #281d33;
 }
 
 /* Title Section */
 .card-title h2 {
-  font-family: 'Uncial Antiqua', serif; /* More eldritch look */
+  font-family: 'MedievalSharp', cursive;
   font-size: 1.6rem;
   text-transform: uppercase;
-  color: #ddb35e; /* Gold-chaos tint */
+  color: #f6d99b;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 6px rgba(255, 0, 0, 0.8); /* Subtle glow */
+  text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.6);
 }
 
 /* Image Section */
@@ -57,26 +56,15 @@
   flex-direction: column; /* Stack image and tags */
   align-items: center;
   justify-content: center;
-  height: 220px; /* Fixed height to prevent shifting */
+  height: 260px; /* Fixed height to prevent shifting */
   position: relative;
 }
 .card-image img {
   max-width: 100%;
-  max-height: 180px;
+  max-height: 240px;
   object-fit: contain;
   margin: auto;
-  padding: 5px;
-}
-
-.item-card:nth-of-type(1) .card-image img {
-  transform: scale(1.2);
-}
-.item-card:nth-of-type(2) .card-image img {
-  transform: scale(1.2);
-}
-.item-card:nth-of-type(3) .card-image img {
-  transform: scale(1.2);
-  margin-bottom: 15px; /* Adds space between the image and tags */
+  padding: 0px;
 }
 
 /* Subtitle Tags */
@@ -89,23 +77,29 @@
 }
 
 .subtitle-tags .tag {
-  background: #5b0404;
-  color: #f8e7da;
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  box-shadow: inset 0 0 8px rgba(255, 0, 0, 0.6);
+  font-family: 'Forum', serif;
+  background: #2e1b40 !important;
+  color: #f6f0e1!important;
+  padding: 4px 8px!important;
+  border-radius: 8px!important;
+  font-size: 0.85rem!important;
+  text-transform: uppercase!important;
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.2)!important;
 }
 
 /* Description Section */
 .description {
-  margin: 1rem 0;
+  margin: 1rem 0; 
   max-height: 130px;
-  color: #d0c6b8;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  position: relative;
+  color: #e9e3dc;
+  font-size: 0.85rem;
+  line-height: 1.6;
   margin: 0.5rem 0;       /* Add spacing around the text */
+  font-family: 'Cormorant Garamond', serif;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* make it pop on bright star patches */
 }
 
 /* Stats Section */
@@ -120,11 +114,12 @@
   flex-wrap: nowrap !important;
   font-size: 10pt !important;
   padding: 0.9rem 6px !important; 
-  background: #3e1c1c !important; /* Dark, bloodied background */
-  border: 3px solid #5b0404 !important; /* Deep red Chaos border */
+  background: #24222200!important;
+  border: 3px solid #49375a!important;
   border-radius: 0 0 9px 9px !important;
-  box-shadow: inset 0 -4px 6px rgba(255, 0, 0, 0.4) !important; /* Red glow inside */
+  box-shadow: inset 0 -4px 6px rgba(247, 228, 176, 0.3) !important; /* soft gold glow */
   margin-top: auto !important;
+  font-family: 'Tinos', serif; /* for clarity */
 }
 
 .stats div {
@@ -132,28 +127,27 @@
   text-align: center !important;
   font-weight: bold !important;
   font-size: 0.9rem !important;
-  border-right: 2px solid #5b0404 !important; /* Dark red divider */
+  border-right: 2px solid #a6804f !important;
   box-sizing: border-box !important; /* Maintain proper flex sizing */
-
-  /* ✅ Ensures text fits and is fully visible */
   white-space: normal !important; /* Allow multi-line text */
   word-break: break-word !important; /* Prevents text overflow */
   overflow: visible !important; /* Ensures full text visibility */
   text-overflow: unset !important; /* Remove ellipsis effect */
-  color: #f8e7da !important; /* Off-white to contrast dark bg */
+  color: #e8d3b9;
+  border-right: 1px solid #a88a50 !important;
 }
 
 .stats div:last-child {
   border-right: none !important; /* Remove last divider */
 }
 @media print {
+  @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
   * {
     box-sizing: border-box !important;
     font-family: 'Georgia', serif !important;
   }
 
   body {
-    background: url('chaos-texture.png') !important;
     background-size: cover !important;
     background-attachment: fixed !important;
     -webkit-print-color-adjust: exact;
@@ -172,7 +166,7 @@
   .item-card {
   display: flex;
   flex-direction: column;
-  border: 10px solid #5b0404 !important;
+  border: 15px solid #281d33;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2) !important;
   justify-content: space-between;
   align-items: center;
@@ -181,7 +175,7 @@
   width: 350px !important;
   page-break-inside: avoid;
   border-radius: 12px !important;
-  background: url('./images/chaos-texture.png') no-repeat center center !important;
+  background: url('./images/texture.jpg') no-repeat center center !important;
   background-size: cover !important;
   padding: 15px !important;
   position: relative !important;
@@ -192,10 +186,7 @@
   font-family: "Georgia", serif !important;
   z-index: 1 !important;
 }
-
-
-  /* Chaos border for print */
-  .item-card::before {
+.item-card::before {
     content: "" !important;
     position: absolute !important;
     top: -10px !important;
@@ -205,59 +196,83 @@
     z-index: 10 !important;
     pointer-events: none !important;
   }
-
-  .card-image img {
-    max-width: 140%;
-    max-height: 280px;
-    object-fit: none;
-    display: block !important;
-    margin: 0 auto;
-    visibility: visible !important;
-  }
+  .card-title h2 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #f6d99b;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.6);
+  
+}
+.card-image {
+  display: flex;
+  flex-direction: column; /* Stack image and tags */
+  align-items: center;
+  justify-content: center;
+  height: 260px; /* Fixed height to prevent shifting */
+  position: relative;
+}
+.card-image img {
+  max-width: 110%;
+  max-height: 240px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
 
   .subtitle-tags {
-    font-size: 0.9rem;
-    color: #f8e7da !important;
-    display: block !important;
+    display: flex;
+    justify-content: center !important;
+    gap: 0.5rem;
+    margin-top: 5px !important;
+    position: relative !important;
     visibility: visible !important;
   }
   .subtitle-tags .tag { 
   /* replicate your screen tag style */
-  background: #5b0404; 
-  padding: 4px 8px;
+  background: #2e1b40 !important;
+  color: #f6f0e1!important;
+  font-family: 'Forum', serif;
+  border-radius: 8px!important;
+  text-transform: uppercase!important;
+  padding: 2px 4px;
   font-size: 0.85rem; 
-  box-shadow: inset 0 0 8px rgba(255, 0, 0, 0.6);
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.2)!important;
 }
 
-  h1, h2, h3 {
-    font-weight: 700 !important;
-    font-family: "Georgia", serif !important;
-  }
-  .description {
-    font-size: 0.9rem;
-    max-height: none;
+.description {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
     line-height: 1.5 !important;
+    max-height: none !important;
     overflow: hidden !important;
-    color: #f8e7da !important;
-  }
+  margin: 1rem 0; 
+  position: relative;
+  color: #e9e3dc;
+  margin: 0.5rem 0;       /* Add spacing around the text */
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* make it pop on bright star patches */
+}
   .stats {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #3e1c1c !important;
-  border: 3px solid #5b0404 !important;
-  border-radius: 0 0 9px 9px;
+  background: #24222200!important;
+  border: 3px solid #49375a!important;
+  border-radius: 0 0 9px 9px !important;
+  box-shadow: inset 0 -4px 6px rgba(247, 228, 176, 0.3) !important; /* soft gold glow */
   margin: 0 !important; /* Remove the -19px shift */
   width: 100% !important; /* prevent overflow */
   padding: 0.75rem 4px !important;
-  box-shadow: inset 0 -4px 6px rgba(255, 0, 0, 0.4) !important;
 }
 .stats div {
   flex: 1 !important;
   text-align: center !important;
   font-weight: bold !important;
-  font-size: 0.9rem !important;
-  border-right: 2px solid #5b0404 !important;
+  font-size: 0.8rem !important;
+  border-right: 2px solid #171c29 !important;
   box-sizing: border-box !important;
   white-space: normal !important;
   word-break: break-word !important;
@@ -273,11 +288,10 @@
     display: none !important;
   }
 }
-  </style>
+</style>
 </head>
 <body>
-  <div id="card-container" class="card-container">
-    <div class="chaos-border-1.png"></div> <!-- This ensures the border surrounds all cards -->
+  <div id="card-container" class="card-container"></div>
 </body>
   <script>
     // Fetch the JSON file and render cards

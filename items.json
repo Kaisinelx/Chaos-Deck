@@ -1,342 +1,91 @@
 [
-  {
-      "title": "Warp-Touched Dagger",
-      "tags": ["Weapon", "Tainted", "Uncommon"],
-      "image": "./images/WarpTouchedDagger.png",
-      "description": [
-          "<strong>Description:</strong> A simple dagger infused with barely perceptible warp energy. It grants unnatural precision and pierces armor with ease. Grants +5% WS and ignores 1 AP. On a natural 01-05 to hit, the dagger channels Warp energy uncontrollably, dealing 1 automatic Wound to the wielder "
-      ],
-      "stats": {
-          "Cost": "20gc",
-          "Enc": "0.5 lbs",
-          "Effect": "SB"
-      }
-  },
-  {
-      "title": "Whispering Trinket",
-      "tags": ["Accessory", "Tainted", "Uncommon"],
-      "image": "./images/WhisperingTrinket.png",
-      "description": [
-          "<strong>Description:</strong> A small metal charm covered in shifting Chaos symbols that whisper in the wind, offering unpredictable insight. Each morning, the wearer rolls 1d6:",
-          "1-2: +5% Perception",
-          "3-4: +5% Intelligence",
-          "5-6: +5% Fellowship"
-      ],
-      "stats": {
-          "Cost": "15gc",
-          "Enc": "N/A",
-          "Effect": "Stated"
-      }
-  },
-  {
-      "title": "Slaanesh’s Perfume",
-      "tags": ["Consumable", "Tainted", "Uncommon"],
-      "image": "./images/Perfume.png",
-      "description": [
-          "<strong>Description:</strong> An intoxicating perfume that enhances the wearer’s presence. Grants +10 FEL for 1 hour, and those within 2 squares feel an unnatural attraction toward the wearer. However, once it wears off, the user must pass a WP Test (-10%) or suffer from withdrawal for 1d10 hours. During this time, all social interactions feel shallow and meaningless."
-      ],
-      "stats": {
-          "Cost": "30gc",
-          "Enc": "N/A",
-          "Effect": "Stated"
-      }
-  },
-  {
-      "title": "Soul Quencher",
-      "tags": ["Armor", "Tainted", "Uncommon"],
-      "image": "./images/RottingGauntlet.png",
-      "description": [
-          "<strong>Description:</strong> A single glove, soft yet oddly spongy. It enhances grip strength but carries the stench of decay. Grants +10% to Strength-based tests, but NPCs within 1 square suffer -5 Fellowship when interacting with the wearer."
-      ],
-      "stats": {
-          "Cost": "40gc",
-          "Enc": "2 lbs",
-          "Effect": "Stated"
-      }
-  },
-  {
-      "title": "Tzeentch’s Candle",
-      "tags": ["Utility", "Tainted", "Uncommon"],
-      "image": "./images/TzeentchCandle.png",
-      "description": [
-          "<strong>Description:</strong> A candle that burns in unnatural hues, flickering even without wind. When lit, it reveals all invisible creatures and magical auras within a 5-square radius. The candle lasts for 1 hour per use."
-      ],
-      "stats": {
-          "Cost": "25gc",
-          "Enc": "1 lbs",
-          "Effect": "Stated"
-      }
-  },
     {
-        "title": "Bloodbound Axe",
-        "tags": ["Weapon", "Tainted", "Rare", "Khorne"],
-        "image": "./images/BloodboundAxe.png",
-        "description": [
-            "<strong>Description:</strong> A brutal axe that vibrates with a hunger for battle, seeking the blood of its enemies. Grants +10% WS while injured and deals +1 damage. If the wielder is at 50% HP or lower, they must pass a WP Test (-10%) or attack the nearest enemy."
-        ],
-        "stats": {
-            "Cost": "75gc",
-            "Enc": "5 lbs",
-            "Effect": "SB+1"
-        }
-    },
-    {
-        "title": "Oracle Mask",
-        "tags": ["Accessory", "Tainted", "Rare", "Tzeentch"],
-        "image": "./images/OracleMask.png",
-        "description": [
-            "<strong>Description:</strong> An unsettling mask that grants glimpses of possible futures but twists reality slightly each time. Once per day, the wearer may reroll one failed test. On a roll of 96-100, the result is altered in an unpredictable way."
-        ],
-        "stats": {
-            "Cost": "100gc",
-            "Enc": "1 lbs",
-            "Effect": "Stated"
-        }
-    },
-    {
-        "title": "Daemon-Clawed Boots",
-        "tags": ["Armor", "Tainted", "Rare", "Slaanesh"],
-        "image": "./images/DaemonClawedBoots.png",
-        "description": [
-            "<strong>Description:</strong> Boots of unnatural grace and movement, making the wearer near silent. Grants +10 Agility and allows the wearer to land without sound."
-        ],
-        "stats": {
-            "Cost": "85gc",
-            "Enc": "2 lbs",
-            "Effect": "Stated"
-        }
-    },
-    {
-        "title": "Rotheart Pendant",
-        "tags": ["Accessory", "Tainted", "Rare", "Nurgle"],
-        "image": "./images/RotheartPendant.png",
-        "description": [
-            "<strong>Description:</strong> A pulsing, fleshy pendant that dulls pain and grants unnatural resilience. Grants +10 Toughness, and the wearer may ignore the effects of light wound (1 damage). However, their flesh becomes unresponsive, making wounds close improperly (-1 incoming healing)."
-        ],
-        "stats": {
-            "Cost": "90gc",
-            "Enc": "N/A",
-            "Effect": "Stated"
-        }
-    },
-    {
-        "title": "Warpsteel Bracers",
-        "tags": ["Armor", "Tainted", "Rare"],
-        "image": "./images/WarpsteelBracers.png",
-       "description": [
-  "<strong>Description:</strong> Metal bands that shift in color and strengthen in chaos. Grants +1 AP when surrounded by 2+ enemies. Roll 1d10 on activation;",
-"1-3: Uncontrollable surge (no dodge 'till next turn);",
-"4-7: Normal function;", 
-"8-10: Overcharge for +1 extra AP."
-],
-        "stats": {
-            "Cost": "95gc",
-            "Enc": "3 lbs",
-            "Effect": "Stated"
-        }
-    }, 
-    {
-      "title": "Claymore of the Ever-Hungry",
-      "tags": ["Weapon", "Chaos", "Very Rare", "Khorne"],
-      "image": "./images/ClaymoreOfEverHungry.png",
+      "title": "Searing Pride",
+      "image": "./images/Pride.png",
+      "tags": [ "Sin", "Unique", "Blessed"],
       "description": [
-          "<strong>Description:</strong> Attacks are now regarded as ''Impact'' quality. On a kill, the wielder heals 1W and use free action to enter ''Rage'', but must pass a WP Test (-10%) or enter a blood rage, attacking the nearest living creature (friend or foe) for 1 round. Rage: Grants +10 bonus to control effects and +1 damage to all attacks while raging."
-        ],
-      "stats": {
-          "Cost": "150gc",
-          "Enc": "1 lbs",
+    "A longsword once radiant, now tainted by fallen glory. Deals +1 Damage. If the target's STR or WP is lower than the wielder’s, attacks gain Impact. Once per session, emit blinding light—enemies within 4 squares must pass a Challenging (–10%) WP Test or be Stunned for 1 round. Chaosborne creatures are instantly stunned without a test."],
+    "stats": {                       
+          "Cost": "Relic",
+          "Enc": "40 lbs",
           "Effect": "SB+1"
-      }
-  },
-  {
-    "title": "Cloak of the Abyss",
-    "tags": ["Cloth", "Chaos", "Very Rare", "Tzeentch"],
-    "image": "./images/CloakOfAbyss.png",
-    "description": [
-      "<strong>Description:</strong> A writhing cloak of chitin and shadow, infused with chaotic will. Once per session, summon abyssal limbs to attack or defend:",
-      "- <strong>Attack:</strong> Strike an adjacent target using Weapon Skill, dealing 1d10+3 Damage (ignores 1 AP).",  
-      "- <strong>Defend:</strong> Force an enemy to reroll a successful melee attack once per round."
-    ],
-    "stats": {
-      "Cost": "200gc",
-      "Enc": "4 lbs",
-      "Effect": "Stated"
-    }
-  },
-  {
-      "title": "Perfectionist's Blade",
-      "tags": ["Weapon", "Chaos", "Very Rare", "Slaanesh"],
-      "image": "./images/PerfectBlade.png",
-      "description": [
-          "<strong>Description:</strong> Enemies within 3 squares must pass a CHallenging WP Test (-10%) or waste their first action admiring the blade. The wielder must pass a WP Test (-10% per week of wielding it) or become obsessed with polishing and admiring the sword, suffering -10% WS if forced to use another weapon."
-      ],
-      "stats": {
-          "Cost": "250gc",
-          "Enc": "4 lbs",
-          "Effect": "SB+2"
-      }
-  },
-  {
-      "title": "Daemonfire Gauntlet",
-      "tags": ["Weapon", "Chaos", "Very Rare", "Nurgle"],
-      "image": "./images/DaemonfireGauntlet.png",
-      "description": [
-          "<strong>Description:</strong> Twice per day, the wielder may unleash a 3-square cone of plaguefire. All within must pass a Toughness Test (-20%) or suffer -1 Wound per round [ignoring armor/toughness] for 3 rounds. After each use, the wielder’s hand rots slightly, requiring a WP Test (-10%) or they lose fine motor control for 1 hour."
-      ],
-      "stats": {
-          "Cost": "300gc",
-          "Enc": "6 lbs",
-          "Effect": "Stated"
-      }
-  },
-  {
-      "title": "Warp-Wreathed Crown",
-      "tags": ["Accessory", "Chaos", "Very Rare"],
-      "image": "./images/WarpWreathedCrown.png",
-      "description": [
-          "<strong>Description:</strong> A pulsating crown that grants visions of power. Provides +10 Intelligence and allows the wearer to speak Daemonic tongues. Once per week, the wearer may ask a single yes/no question and receive an answer from a Daemon."
-      ],
-      "stats": {
-          "Cost": "350gc",
-          "Enc": "1 lbs",
-          "Effect": "Stated"
-      }
-  },
-  {
-    "title": "The Crimson Crown",
-    "tags": ["Headgear", "Khorne", "Legendified"],
-    "image": "./images/CrimsonCrown.png",
-    "description": [
-        "<strong>Description:</strong> The wearer gains +1 melee attack per turn. If removed, the wearer must immediately attack whoever took it off."
-    ],
-    "stats": {
-        "Cost": "Priceless",
-        "Enc": "2 lbs",
-        "Effect": "Stated"
-    }
-},
-{
-  "title": "Flesh-Twisting Armor",
-  "tags": ["Armor", "Nurgle", "Legendified"],
-  "image": "./images/FleshTwistingArmor.png",
-  "description": [
-      "<strong>Description:</strong> This living armor fuses with the wearer’s skin. Grants +3 AP (full) and makes the wearer immune to disease and poison, but every week, the wearer grows a new, unpredictable mutation. Once the wearer gains 3 mutations, they must pass a WP Test (-20%) or become enslaved to Nurgle’s will."
+        }
+      },
+      {
+        "title": "Avaricious Mantle ",
+        "image": "./images/Greed.png",
+        "tags": ["Clothing", "Sin", "Enchanted"],
+        "description": [
+          "<strong>Description:</strong> A cloak shimmering with opulence. Once per session, whisper a desire to a visible target (coin, item, scrolls etc.). If they possess it, they must pass a Challenging (–10%) WP Test or offer it within the hour. If they resist, you gain +10 FEL against them for the session. If they yield, test WP yourself or gain 1 Corruption Point."], 
+          "stats": {                       
+          "Cost": "Relic",
+          "Enc": "15 lbs",
+          "Effect": "Greed"
+        }
+      },
+      {
+        "title": "Lustful Lure",
+          "image": "./images/Lust_Rapier.png",
+          "tags": ["Sin", "Unique", "Rapier"],
+          "description": [
+          "A beautiful, thorned rapier that sings of zest and violence. Each hit tempts the target’s soul on a failed Routine WP Test, they suffer –10% CS and Agility against you for 1 round ('till 30%). Once per session, when you inflict a critical wound, you may invoke the <em>Ecstasy of Blood</em>, the wounded creature enters Frenzy, attacking the nearest creature for 1d5 rounds before collapsing dead as the ecstasy burns out its body."], 
+            "stats": {                       
+            "Cost": "Relic",
+            "Enc": "20 lbs",
+            "Effect": "Lust"
+            }
+        },
+        {
+          "title": "Envious Evoker",
+          "image": "./images/Envy_Shortsword.png",
+          "tags": ["Sin", "Shortsword", "Unique"],
+          "description": [
+            "<strong>Description:</strong> A twisted shortsword that festers with covetousness. If the target has higher AG, WS, INT, or WP than the wielder, each successful strike grants +5% cumulatively to tests using that characteristic against them. The bonus resets if the wielder does not attack the target for one round."
+          ],
+          "stats": {                       
+            "Cost": "Relic",
+            "Enc": "22 lbs",
+            "Effect": "Envy"
+          }
+        },
+        {
+          "title": "Gluttonous Guillotine",
+          "image": "./images/Gluttony_GSword.png",
+          "tags": ["Two-Handed", "Sin"],
+          "description": [
+            "<strong>Description:</strong> A massive blade that hungers for suffering. When striking a Heavily Wounded enemy (3 Wounds or fewer), the weapon gains the <strong>Impact</strong> quality for that attack. If this effect is triggered for a second time on the same target, you must pass a Challenging (-10%) WP Test or gain 1 Corruption Point."
+          ],
+          "stats": {                       
+            "Cost": "Relic",
+            "Enc": "30 lbs",
+            "Effect": "Gluttony"
+          }
+        },
+        {
+          "title": "Seething Pursuit",
+          "image": "./images/Wrath.png",
+          "tags": ["Sin", "Longsword", "Unique"],
+          "description": [
+    "<strong>Description:</strong> A vicious blade that feeds on pain. Gains +5% WS per missing Wound (max +30%). When reduced to 0 Wounds, may ignore Critical Hit and strike once with fast quality and full bonuses (1/session, gain 1 Corruption). Outside combat, must WP Test (–10%) or lash out when emotionally provoked."
   ],
-  "stats": {
-      "Cost": "Priceless",
-      "Enc": "50 lbs",
-      "Effect": "Stated"
-  }
-},
-{
-  "title": "The Ever-Shifting Blade",
-  "tags": ["Weapon", "Chaos", "Legendified", "Tzeentch"],
-  "image": "./images/EverShiftingBlade.png",
-  "description": [
-      "<strong>Description:</strong> A sword of ever-changing metal, reshaping mid-swing to adapt to its enemy’s weaknesses. It automatically adjusts to bypass enemy armor."
-  ],
-  "stats": {
-      "Cost": "Priceless",
-      "Enc": "4 lbs",
-      "Effect": "SB+2"
-  }
-},
-{
-  "title": "Mirror of Slannesh",
-  "tags": ["Accessory", "Chaos", "Legendified"],
-  "image": "./images/MirrorOfSlaanesh.png",
-  "description": [
-      "<strong>Description:</strong> A flawless obsidian mirror that whispers praise to its owner, showing them their \"true form.\" Grants +15 Fellowship, +10 Charm. Once per day, force a target within 5 squares to pass a WP Test (-20%) or become charmed for 1d3 rounds."
-  ],
-  "stats": {
-      "Cost": "Priceless",
-      "Enc": "1 lbs",
-      "Effect": "Stated"
-  }
-},
-{
-  "title": "The Doom Bell",
-  "tags": ["Item", "Chaos", "Legendified"],
-  "image": "./images/DoomBell.png",
-  "description": [
-      "<strong>Description:</strong> Once per day, the wielder may toll the bell, forcing all enemies within 10 squares to take a Challenging Terror Test [-10%]. Each time the bell rings, the wielder must pass a WP Test (-10%) or suffer visions of their own death, imposing -5% WP and -5 Initiative until the next session."
-  ],
-  "stats": {
-      "Cost": "Priceless",
-      "Enc": "5 lbs",
-      "Effect": "Stated"
-  }
-},
-  {
-      "title": "Blade of the Dark Gods",
-      "tags": ["Weapon", "Chaos", "Cursed", "Khorne"],
-      "image": "./images/BladeOfTheDarkGods.png",
-      "description": [
-          "<strong>Description:</strong> A daemonic blade, thirsty for endless slaughter. It whispers of grand battles and eternal war. Grants +3 DMG and causes unstoppable bleeding wounds on critical hits."
-      ],
-      "stats": {
-          "Cost": "N/A",
-          "Enc": "5 lbs",
-          "Effect": "SB+3"
-      }
-  },
-  {
-      "title": "Deck of the Changer",
-      "tags": ["Tattoo", "Chaos", "Cursed", "Tzeentch"],
-      "image": "./images/ChangerDeck.png",
-      "description": [
-          "<strong>Description:</strong> A deck of possbilities, its colors twisting impossibly. A mysterious deck of ivory or vellum cards, numbering 13 or 22. When drawn, each card triggers a powerful and unpredictable magical effect, often altering fate itself. Cards vanish after use, save for a few trickster cards that may return. The deck is known to bring fortune or ruin in equal measure."
-      ],
-      "stats": {
-          "Cost": "N/A",
-          "Enc": "2 lbs",
-          "Effect": "Stated"
-      }
-  },
-  {
-      "title": "The Famine Heart",
-      "tags": ["Artifact", "Chaos", "Cursed", "Nurgle"],
-      "image": "./images/TheFamineHeart.png",
-      "description": [
-          "<strong>Description:</strong> A dried, shriveled heart that still beats. As the bearer carries it, their body slowly withers, but they feel no hunger, thirst, or fatigue and gains +1 AP (all). However, each week, they must pass a WP Test (-10%) or permanently lose 1 Wound from their maximum. When the wielder reaches 0 Wounds, they become a mindless husk."
-      ],
-      "stats": {
-          "Cost": "N/A",
-          "Enc": "1 lbs",
-          "Effect": "Stated"
-      }
-  },
-  {
-      "title": "The Silk of Awakening",
-      "tags": ["Clothing", "Chaos", "Cursed", "Slaanesh"],
-      "image": "./images/TheSilkOfAwakening.png",
-      "description": [
-          "<strong>Description:</strong> The wearer’s senses are heightened, boosting sense-related tests by +30, also wearer gains ''Supernatural Allure'' Talent. However, while worn, all damage (even minor scratches) feels euphoric, forcing another WP Test (-10%) to avoid recklessly pursuing more self-harm or conflict."
-      ],
-      "stats": {
-          "Cost": "N/A",
-          "Enc": "4 lbs",
-          "Effect": "Stated"
-      }
-  },
-  {
-      "title": "Primordial Mask of Knowledge",
-      "tags": ["Artifact", "Chaos", "Cursed", "Undivided"],
-      "image": "./images/PrimordialMask.png",
-      "description": [
-          "<strong>Description:</strong> A spiked black crown that grants ultimate knowledge… at a price. It grants +20 Intelligence and allows the wearer to know the answer to one question once per day. After each use, permanently reduce Fellowship by -5% as the wearer becomes too alien in demeanor or cryptic to interact normally."
-      ],
-      "stats": {
-          "Cost": "N/A",
-          "Enc": "3 lbs",
-          "Effect": "Stated"
-      }
-  }
-]
-
-
-
-
-
+          "stats": {                       
+            "Cost": "Relic",
+            "Enc": "10 lbs",
+            "Effect": "Wrath"
+          }
+        },
+        {
+          "title": "Otiose Obfuscation",
+          "image": "./images/Sloth_Bracelet.png",
+          "tags": ["Accessory", "Sin", "Relic"],
+          "description": [
+            "<strong>Description:</strong> Twice per session, the wearer can create a spectral echo that mimics its next action the following turn. You act as normal while it repeats your previous move. As a side effect, you roll Initiative with disadvantage, but have advantage to WP Tests for Insanity."
+          ],
+          "stats": {                       
+            "Cost": "Relic",
+            "Enc": "6 lbs",
+            "Effect": "Sloth"
+          }
+        }
+  ]
   
-

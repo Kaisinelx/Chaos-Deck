@@ -1,7 +1,7 @@
 function createCard(item) {
   return `
     <div class="item-card">
-      <div class="chaos-border"></div>  <!-- 🔹 Border should be inside the item-card -->
+      <div class="chaos-border"></div>
       <div class="card-title">
         <h2>${item.title}</h2>
       </div>
@@ -15,27 +15,23 @@ function createCard(item) {
         ${item.description.map(paragraph => `<p>${paragraph}</p>`).join("")}
       </div>
       <div class="stats">
-        <div><strong>Cost:</strong> ${item.stats.Cost || "-"}</div>
-        <div><strong>Enc:</strong> ${item.stats.Enc || "-"}</div>
-        <div><strong>Effect:</strong> ${item.stats.Effect || "-"}</div>
+        <div><strong>Cost:</strong> ${item.stats?.Cost || "-"}</div>
+        <div><strong>Enc:</strong> ${item.stats?.Enc || "-"}</div>
+        <div><strong>Effect:</strong> ${item.stats?.Effect || "-"}</div>
       </div>
     </div>
   `;
 }
 
-// Function to render all item cards
 function renderCards(items) {
   const container = document.getElementById("card-container");
-  container.innerHTML = `<div class="chaos-border"></div>` + items.map(createCard).join("");
+  container.innerHTML = items.map(createCard).join("");
 }
 
-// Fetch items from JSON and render
 function fetchItems() {
-  fetch('./items.json')
+  fetch('./items.json') // Make sure this path is correct!
     .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       return response.json();
     })
     .then(items => {
@@ -46,6 +42,4 @@ function fetchItems() {
     });
 }
 
-// Load items on page load
 fetchItems();
-
